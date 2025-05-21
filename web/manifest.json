@@ -1,11 +1,11 @@
 {
-    "name": "maggys_flutter",
-    "short_name": "maggys_flutter",
+    "name": "Maggy's",
+    "short_name": "Maggy's",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Fuente de soda",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

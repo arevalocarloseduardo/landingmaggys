@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.transparent,
+    return Scaffold(backgroundColor: Colors.yellow,
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
@@ -155,7 +155,7 @@ class HomePage extends StatelessWidget {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      '¡Gracias por visitarnos!',
+                      '¡Gracias por visitarnos! v1.0',
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontSize: 12,
