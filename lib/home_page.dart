@@ -155,7 +155,7 @@ class HomePage extends StatelessWidget {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      '¡Gracias por visitarnos! v1.0',
+                      '¡Gracias por visitarnos! v1.1',
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontSize: 12,
