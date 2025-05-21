@@ -1,6 +1,6 @@
-# Maggys Web
+# Landing Maggy's
 
-Aplicación web desarrollada con Flutter.
+Sitio web de Maggy's desplegado automáticamente con GitHub Actions y Flutter Web.
 
 ## Getting Started
 
