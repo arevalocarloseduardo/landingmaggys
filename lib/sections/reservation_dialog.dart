@@ -245,7 +245,7 @@ class _ReservationDialogState extends State<ReservationDialog> {
                       '¡Por inauguración! Completa tus datos para aprovechar esta oferta especial. La reserva es válida hasta el 22 de mayo a las 00:00. Cupos limitados hasta agotar reservas.',
                       style: TextStyle(
                         color: Colors.grey[700],
-                        fontSize: 16,
+                        fontSize: 12,
                         height: 1.4,
                       ),
                     ),
@@ -442,7 +442,7 @@ class _ReservationDialogState extends State<ReservationDialog> {
                               ),
                               child: sending
                                   ? const CircularProgressIndicator(color: Colors.white)
-                                  : const Text('Confirmar Solicitud de Reserva'),
+                                  : const Text('Enviar solicitud'),
                             ),
                           ),
                         ],

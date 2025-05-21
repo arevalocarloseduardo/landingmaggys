@@ -36,12 +36,12 @@ class _ProductSectionState extends State<ProductSection> with SingleTickerProvid
 
   void _scrollToCategory(int index) {
     if (!_scrollController.hasClients) return;
-    
+
     // Calcular la posición aproximada del item
     final itemWidth = 200.0; // Ancho aproximado de cada item incluyendo el padding
     final screenWidth = MediaQuery.of(context).size.width;
     final offset = (itemWidth * index) - (screenWidth / 2) + (itemWidth / 2);
-    
+
     _scrollController.animateTo(
       offset.clamp(0.0, _scrollController.position.maxScrollExtent),
       duration: const Duration(milliseconds: 300),
@@ -179,9 +179,7 @@ class _ProductSectionState extends State<ProductSection> with SingleTickerProvid
                         _scrollToCategory(selectedCategoryIndex);
                       }
                     },
-                    color: selectedCategoryIndex > 0 
-                      ? Theme.of(context).colorScheme.primary 
-                      : Colors.grey[400],
+                    color: selectedCategoryIndex > 0 ? Theme.of(context).colorScheme.primary : Colors.grey[400],
                   ),
                   // Lista de categorías
                   Expanded(
@@ -201,9 +199,7 @@ class _ProductSectionState extends State<ProductSection> with SingleTickerProvid
                             duration: const Duration(milliseconds: 200),
                             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                             decoration: BoxDecoration(
-                              color: selected
-                                  ? Theme.of(context).colorScheme.primary.withOpacity(0.12)
-                                  : Colors.white.withOpacity(0.7),
+                              color: selected ? Colors.yellow.withOpacity(1) : Colors.yellow,
                               borderRadius: BorderRadius.circular(28),
                               border: Border.all(
                                 color: selected ? Theme.of(context).colorScheme.primary : Colors.transparent,
@@ -242,9 +238,9 @@ class _ProductSectionState extends State<ProductSection> with SingleTickerProvid
                         _scrollToCategory(selectedCategoryIndex);
                       }
                     },
-                    color: selectedCategoryIndex < categories.length - 1 
-                      ? Theme.of(context).colorScheme.primary 
-                      : Colors.grey[400],
+                    color: selectedCategoryIndex < categories.length - 1
+                        ? Theme.of(context).colorScheme.primary
+                        : Colors.grey[400],
                   ),
                 ],
               ),
@@ -302,11 +298,11 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 0),
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 28),
+      margin: const EdgeInsets.symmetric(vertical: 1, horizontal: 0),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       decoration: BoxDecoration(
         color: const Color(0xFFF7F2E8), // Fondo claro
-        borderRadius: BorderRadius.circular(28),
+        borderRadius: BorderRadius.circular(18),
         boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 18, offset: const Offset(0, 6))],
       ),
       child: Row(
@@ -333,24 +329,40 @@ class ProductCard extends StatelessWidget {
                     ),
             ),
           ),
-          const SizedBox(width: 32),
+          const SizedBox(width: 10),
           // Título y descripción
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  product['name'] ?? '',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 18,
-                    color: const Color(0xFF44474F),
-                  ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
+                Row(
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width>=600?300:MediaQuery.of(context).size.width * 0.46,
+                      child: Text(
+                        product['name'] ?? '',
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 14,
+                          color: const Color(0xFF44474F),
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    Spacer(),
+                    Text(
+                      '\$${double.parse(product['price'].toString()).toStringAsFixed(0)}',
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        color: const Color(0xFF6EC6E6),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 1),
                 Text(
                   product['description'] ?? '',
                   style: Theme.of(
@@ -362,14 +374,9 @@ class ProductCard extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(width: 10),
+          const SizedBox(width: 5),
+
           // Precio destacado
-          Text(
-            '\$${double.parse(product['price'].toString()).toStringAsFixed(0)}',
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(color: const Color(0xFF6EC6E6), fontWeight: FontWeight.bold, fontSize: 22),
-          ),
         ],
       ),
     );

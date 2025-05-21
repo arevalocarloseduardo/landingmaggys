@@ -54,7 +54,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
           child: Column(
             children: [
               Text(
-                "Maggy's",
+                "Maggy's\n",
                 style: TextStyle(
                   color: Color.fromARGB(255, 243, 30, 30),
                   fontWeight: FontWeight.w900,
@@ -63,21 +63,28 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                   shadows: [Shadow(color: Colors.black.withOpacity(0.18), blurRadius: 8, offset: Offset(0, 2))],
                 ),
               ),
-              Container(height: 260),
-              SizedBox(width: 520, height: 40, child: CustomPaint(painter: ArcDividerPainter())),
+              Container(height: 50),
+
+              // recorta la mitad superior
+              Container(
+                
+                width: 350,
+                height: 20,
+                child: CustomPaint(painter: ArcDividerPainter()),
+              ),
 
               // Divider en arco
               Container(
                 color: Colors.white,
-                width: 220,
+                width: 0,
                 height: 0,
                 child: ArcText(
-                  radius: 220,
+                  radius: 150,
                   text: 'FUENTE DE SODA',
                   textStyle: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
-                    fontSize: 31,
+                    fontSize: 22,
                     letterSpacing: 3,
                   ),
                   startAngle: 0, // Ajuste para que quede arqueado hacia arriba
@@ -180,10 +187,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                     AnimatedBuilder(
                       animation: _scaleAnimation,
                       builder: (context, child) {
-                        return Transform.scale(
-                          scale: _scaleAnimation.value,
-                          child: child,
-                        );
+                        return Transform.scale(scale: _scaleAnimation.value, child: child);
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 38),
@@ -195,7 +199,8 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [SizedBox(width: 30),
+                          children: [
+                            SizedBox(width: 30),
                             Text(
                               '2',
                               style: TextStyle(
@@ -231,7 +236,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                             ),
                             Transform.translate(
                               offset: const Offset(-22, 0),
-                              child:Text(
+                              child: Text(
                                 '1',
                                 style: TextStyle(
                                   color: Color.fromARGB(255, 240, 35, 35),
@@ -246,7 +251,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                                   ],
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
