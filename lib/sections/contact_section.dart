@@ -138,13 +138,13 @@ class _ContactSectionState extends State<ContactSection> with SingleTickerProvid
                             Icon(
                               Icons.mail_outline_rounded,
                               size: 48,
-                              color: Colors.red[400],
+                              color: Color.fromARGB(255, 234, 24, 24),
                             ),
                             const SizedBox(height: 16),
                             Text(
                               'Ponte en Contacto',
                               style: TextStyle(
-                                color: Colors.red[600],
+                                color: Color.fromARGB(255, 234, 24, 24),
                                 fontSize: 32,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -205,12 +205,12 @@ class _ContactSectionState extends State<ContactSection> with SingleTickerProvid
                           ),
                           child: Row(
                             children: [
-                              Icon(Icons.error_outline, color: Colors.red[400]),
+                              Icon(Icons.error_outline, color:Color.fromARGB(255, 234, 24, 24),),
                               const SizedBox(width: 8),
                               Expanded(
                                 child: Text(
                                   errorMessage!,
-                                  style: TextStyle(color: Colors.red[700]),
+                                  style: TextStyle(color: Color.fromARGB(255, 234, 24, 24),),
                                 ),
                               ),
                             ],
@@ -244,7 +244,7 @@ class _ContactSectionState extends State<ContactSection> with SingleTickerProvid
                               )
                             : ElevatedButton.icon(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.red[400],
+                                  backgroundColor: Color.fromARGB(255, 234, 24, 24),
                                   foregroundColor: Colors.white,
                                   elevation: 0,
                                   shape: RoundedRectangleBorder(
@@ -324,7 +324,7 @@ class _InputField extends StatelessWidget {
           validator: validator,
           decoration: InputDecoration(
             hintText: hint,
-            prefixIcon: Icon(icon, color: Colors.red[300]),
+            prefixIcon: Icon(icon, color: Color.fromARGB(255, 234, 24, 24),),
             filled: true,
             fillColor: Colors.grey[50],
             contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
@@ -338,15 +338,15 @@ class _InputField extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: Colors.red[300]!, width: 2),
+              borderSide: BorderSide(color: Color.fromARGB(255, 234, 24, 24), width: 2),
             ),
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: Colors.red[300]!),
+              borderSide: BorderSide(color: Color.fromARGB(255, 234, 24, 24),),
             ),
             focusedErrorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: Colors.red[300]!, width: 2),
+              borderSide: BorderSide(color: Color.fromARGB(255, 234, 24, 24), width: 2),
             ),
           ),
         ),

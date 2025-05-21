@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                   child: Container(
                     width: double.infinity,
                     height: 150,
-                    color: const Color(0xFFC84C4C),
+                    color: Color.fromARGB(255, 234, 24, 24),
                   ),
                 ),
                 Positioned(
@@ -100,9 +100,9 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      const Color(0xFFC84C4C).withOpacity(0.10),
-                      const Color(0xFFC84C4C).withOpacity(0.04),
-                      const Color(0xFFC84C4C).withOpacity(0.08),
+                      const Color.fromARGB(255, 222, 222, 63).withOpacity(0.10),
+                      const Color.fromARGB(255, 222, 222, 63).withOpacity(0.04),
+                      const Color.fromARGB(255, 222, 222, 63).withOpacity(0.08),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,

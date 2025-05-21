@@ -105,7 +105,7 @@ class _ReservationDialogState extends State<ReservationDialog> {
   String? successMsg;
   int? lastStatusCode;
 
-  Color get accentColor => const Color(0xFFE57373); // Rojo pastel
+  Color get accentColor => const Color.fromARGB(255, 232, 28, 28); // Rojo pastel
   Color get bgColor => const Color(0xFFFCF6F0); // Fondo claro
 
   @override
@@ -231,7 +231,7 @@ class _ReservationDialogState extends State<ReservationDialog> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   if (successMsg == null) ...[
-                    Text('🎉 Reserva tu 2x1',
+                    Text('🎉 Reservá tu 2x1',
                       style: TextStyle(
                         color: accentColor,
                         fontWeight: FontWeight.bold,

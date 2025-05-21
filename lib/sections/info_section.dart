@@ -23,7 +23,7 @@ class InfoSection extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Encuéntranos en el corazón de la ciudad o conéctate con nosotros en línea.',
+            'Te esperamos en Fuente de soda Maggy\'s, conéctate con nosotros en línea.',
             style: Theme.of(context).textTheme.bodyLarge,
             textAlign: TextAlign.center,
           ),
