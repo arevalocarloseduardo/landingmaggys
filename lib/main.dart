@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
       
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFC84C4C),
-          primary: const Color(0xFFC84C4C),
-          secondary: const Color(0xFFC84C4C),
+          seedColor: const Color.fromARGB(255, 234, 24, 24),
+          primary: const Color.fromARGB(255, 234, 24, 24),
+          secondary: const Color.fromARGB(255, 234, 24, 24),
         ),
       ),
       home: const HomePage(),
