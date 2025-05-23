@@ -45,7 +45,8 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
               end: Alignment.bottomCenter,
               colors: [
                 Colors.yellow,
-                Color(0xFF0A1026), // Azul oscuro igual al card de abajo
+                Colors.yellow,
+                 // Azul oscuro igual al card de abajo
               ],
               stops: [0.7, 1.0],
             ),
@@ -99,7 +100,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
           ),
         ),
         // Fondo oscuro con promo
-        Container(
+       /* Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 16),
           decoration: const BoxDecoration(
@@ -280,7 +281,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
               ),
             ],
           ),
-        ),
+        ),*/
       ],
     );
   }

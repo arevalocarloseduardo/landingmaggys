@@ -6,6 +6,7 @@ import 'sections/product_section.dart';
 import 'sections/info_section.dart';
 import 'sections/contact_section.dart';
 import 'sections/rewards_section.dart';
+import 'sections/inauguration_countdown_section.dart';
 
 // Define the WaveClipper class here or in semicircle_clipper.dart
 class WaveClipper extends CustomClipper<Path> {
@@ -97,19 +98,10 @@ class HomePage extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate([
               Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      const Color.fromARGB(255, 222, 222, 63).withOpacity(0.10),
-                      const Color.fromARGB(255, 222, 222, 63).withOpacity(0.04),
-                      const Color.fromARGB(255, 222, 222, 63).withOpacity(0.08),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                ),
+                decoration: null,
                 child: const HeroSection(),
               ),
+              const InaugurationCountdownSection(),
               const ProductSection(),
               const RewardsSection(),
               const InfoSection(),
