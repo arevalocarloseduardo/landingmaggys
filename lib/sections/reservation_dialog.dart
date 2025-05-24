@@ -242,7 +242,7 @@ class _ReservationDialogState extends State<ReservationDialog> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      '¡Por inauguración! Completa tus datos para aprovechar esta oferta especial. La reserva es válida hasta el 22 de mayo a las 00:00. Cupos limitados hasta agotar reservas.',
+                      'Completá tus datos para aprovechar esta oferta especial. Cupos limitados hasta agotar reservas.',
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontSize: 12,

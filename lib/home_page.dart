@@ -6,7 +6,6 @@ import 'sections/product_section.dart';
 import 'sections/info_section.dart';
 import 'sections/contact_section.dart';
 import 'sections/rewards_section.dart';
-import 'sections/inauguration_countdown_section.dart';
 
 // Define the WaveClipper class here or in semicircle_clipper.dart
 class WaveClipper extends CustomClipper<Path> {
@@ -101,7 +100,6 @@ class HomePage extends StatelessWidget {
                 decoration: null,
                 child: const HeroSection(),
               ),
-              const InaugurationCountdownSection(),
               const ProductSection(),
               const RewardsSection(),
               const InfoSection(),

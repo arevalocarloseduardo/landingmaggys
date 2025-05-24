@@ -87,7 +87,8 @@ class _ProductSectionState extends State<ProductSection> with SingleTickerProvid
       final response = await http.get(Uri.parse(apiUrl), headers: {'x-api-key': apiKey});
       if (response.statusCode == 200) {
         final List data = json.decode(response.body);
-        products = data;
+        // Filtrar productos con stock > 0
+        products = data.where((p) => (p['stock'] ?? 0) > 0).toList();
         productsByCategory = {};
         for (var product in products) {
           final category = (product['category'] ?? 'Varios').toString().trim();
